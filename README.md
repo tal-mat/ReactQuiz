@@ -26,6 +26,18 @@ To get started with the project, follow these steps:
    npm install
    ```
 
+3. **Run the Question API**
+
+   The application fetches quiz questions from an API. To ensure the application works correctly, you need to run the question API server.
+
+   **To run the API server locally:**
+
+     ```bash
+     npm run server
+     ```
+
+   * Ensure the server is running on port `8000` or update the API endpoint in the application code if using a different port.
+
 ## Usage
 
 To start the development server and run the application locally, use:
@@ -34,4 +46,9 @@ To start the development server and run the application locally, use:
 npm start
 ```
 
-This will start the development server and open the application in your default web browser.
+This will start the development server and open the application in your default web browser. Make sure that the question API server is also running to fetch quiz data successfully.
+
+## Troubleshooting
+
+* **API Not Responding**: Ensure that the question API server is running and accessible at the correct URL and port. You can check this by navigating to `http://localhost:8000/questions` in your web browser.
+* **Missing Questions**: If questions are not loading, verify that the API endpoint in the React application matches the URL where the API server is running.

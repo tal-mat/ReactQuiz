@@ -12,7 +12,7 @@ export default function Options({ question }) {
       {question.options.map((option, index) => (
         <button
           key={option}
-          disabled={answer !== null}
+          disabled={hasAnswered}
           className={`btn btn-option ${index === answer ? "answer" : ""} ${
             hasAnswered
               ? index === question.correctOption
